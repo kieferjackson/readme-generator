@@ -1,7 +1,6 @@
 const gen_md = require('./utils/generateMarkdown.js');
 const inq = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // Questions for user input to define the README
 const questions = 
@@ -10,7 +9,7 @@ const questions =
     {
         type: 'input',
         message: 'What is the name of your project?',
-        name: 'name'
+        name: 'project_name'
     },
     {
         type: 'input',
@@ -67,7 +66,7 @@ const questions =
 function writeToFile(fileName, data) 
 {
     // Generate the README file contents
-    const README = generateMarkdown(data);
+    const README = gen_md.generateMarkdown(data);
 
     // Write the README file defined by fileName and file contents
     fs.writeFile

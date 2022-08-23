@@ -7,7 +7,8 @@ function renderLicenseBadge(license)
 		case 'There is no license for this project':
 			return '';
 		default: 
-			return `[shields.io](https://img.shields.io/badge/license-${license}-blue)`;
+			let license_trim = license.replace(/ /g, '%20');
+			return `![License](https://img.shields.io/badge/license-${license_trim}-blue)`;
 	}
 }
 
@@ -33,8 +34,10 @@ function renderLicenseSection(license)
 		case 'There is no license for this project':
 			return '';
 		default: 
-			return `## Licenses
-			Licensed under ${licenses}`;
+		let license_section = `## License
+Licensed under ${license}`;
+
+		return license_section;
 	}
 }
 

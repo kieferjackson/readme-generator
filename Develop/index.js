@@ -11,31 +11,37 @@ const questions =
         message: 'What is the name of your project?',
         name: 'project_name'
     },
+    // Project Description
     {
         type: 'input',
         message: 'Please provide a description of your project:',
         name: 'description'
     },
+    // Installation Instructions
     {
         type: 'input',
         message: 'Please provide any installation instructions:',
         name: 'install_instructions'
     },
+    // Intended Usage
     {
         type: 'input',
         message: 'What is the intended usage for this project',
         name: 'usage'
     },
+    // Contribution Guidelines
     {
         type: 'input',
         message: 'Please provide contribution guidelines:',
         name: 'contribution_guide'
     },
+    // Performing Tests
     {
         type: 'input',
         message: 'Please provide how to perform tests:',
         name: 'tests'
     },
+    // Project License
     {
         type: 'list',
         message: 'Which of the following licenses does your project have?',
@@ -50,11 +56,13 @@ const questions =
         ],
         name: 'licenses'
     },
+    // GitHub Profile
     {
         type: 'input',
         message: 'What is your github profile name (e.g. octocat)?',
         name: 'github_profile'
     },
+    // Email Address
     {
         type: 'input',
         message: 'What is your email address (e.g. example@domain.com)?',

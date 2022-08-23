@@ -66,7 +66,7 @@ const questions =
 function writeToFile(fileName, data) 
 {
     // Generate the README file contents
-    const README = gen_md.generateMarkdown(data);
+    const README = gen_md(data);
 
     // Write the README file defined by fileName and file contents
     fs.writeFile

@@ -1,53 +1,78 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+// Returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) 
+{
+	switch(license)
+	{
+		case 'There is no license for this project':
+			return '';
+		default: 
+			return `[shields.io](https://img.shields.io/badge/license-${license}-blue)`;
+	}
+}
 
-// TODO: Create a function that returns the license link
+// Returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) 
 {
 	switch(license)
 	{
-		case 'There is no license for this project':	return '';
-		default: 										return '- [License](#license)';
+		case 'There is no license for this project':
+			return '';
+		default: 
+			return '- [License](#license)';
 	}
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) 
+{
+	switch(license)
+	{
+		case 'There is no license for this project':
+			return '';
+		default: 
+			return `## Licenses
+			Licensed under ${licenses}`;
+	}
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
 	const { project_name, description, install_instructions, usage, contribution_guide, tests, licenses, github_profile, email } = data;
-    return `
-    # ${project_name}
+    return `# ${project_name}
 
-	${renderLicenseBadge(licenses)}
+${renderLicenseBadge(licenses)}
 
-	## Description
-	${description}
+## Description
+${description}
 
-	## Table of Contents
-	- [Installation](#installation)
-	- [Usage](#usage)
-	- [Credits](#credits)
-	${renderLicenseLink(licenses)}
-	## Installation
-	${install_instructions}
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+${renderLicenseLink(licenses)}
+## Installation
+${install_instructions}
 
-	## Usage
-	${usage}
+## Usage
+${usage}
 
-	## Contributing
-	${contribution_guide}
+## Contributing
+${contribution_guide}
 
-	## Tests
-	${tests}
+## Tests
+${tests}
 
-	## Questions
-	If you have any questions related to this project, contact through my [GitHub](https://github.com/${github_profile}) or contact at the following email address: [${email}](${email})
-	`;
+## Questions
+If you have any questions related to this project, contact through my [GitHub](https://github.com/${github_profile}) or contact at the following email address: [${email}](${email})
+
+## Credits
+This project was developed by [${github_profile}](https://github.com/${github_profile})
+
+${renderLicenseSection(licenses)}
+`;
 }
 
 module.exports = generateMarkdown;

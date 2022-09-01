@@ -2,6 +2,8 @@
 
 [How to create a Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
 
+[Application Video Demonstration](https://drive.google.com/file/d/16M3PUkOU80T9xL9Sq88MO162tqKVStT-/view)
+
 ## Purpose
 A well made README is an essential aspect of any programming project, yet it is all too often missing critical information or formatted poorly. The purpose of this project was to create a command-line application using Node.js to automatically generate a README file based on user input. In order to accomplish this, the Inquirer package was used to create prompts for the user to input information. This includes everything from licenses, contact information, and more.
 
